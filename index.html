@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EthnoFlow — A field workbench for TikTok digital ethnography</title>
+<meta name="description" content="EthnoFlow is a local-first research tool for TikTok digital ethnography — capture, code, and write up your corpus like fieldwork, not a marketing dashboard. Free, offline-first, for macOS, Windows, and Linux.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="EthnoFlow — A field workbench for TikTok digital ethnography">
+<meta property="og:description" content="Capture TikToks by URL, code them like fieldwork, and export to Markdown, CSV, or an encrypted project file. Free, local-first, v1.0 core complete.">
+<meta property="og:image" content="assets/img/logo.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">
+      <svg class="brand-mark" width="26" height="26" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <path d="M16 4.5c-6 0-11 5.1-11 11.5S10 27.5 16 27.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M16 9c-3.6 0-6.6 3.1-6.6 7S12.4 23 16 23" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+        <path d="M16 13.4c-1.3 0-2.4 1.2-2.4 2.6s1.1 2.6 2.4 2.6" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+        <circle cx="21.5" cy="16" r="2.1" fill="currentColor"/>
+      </svg>
+      <span class="brand-word">Ethno<em>Flow</em></span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#features">Features</a>
+      <a href="#workflow">Workflow</a>
+      <a href="#compare">Why EthnoFlow</a>
+      <a href="#cite">Cite it</a>
+      <a href="#install">Install</a>
+      <a class="nav-cta" href="#download">Download</a>
+    </nav>
+    <a href="https://github.com/uscabayaosj/ethnoflow" target="_blank" rel="noopener" class="github-badge" aria-label="EthnoFlow on GitHub">
+      <svg class="github-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+      </svg>
+      <span class="github-stars" id="github-stars">—</span>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <img src="assets/img/logo.png" alt="EthnoFlow app icon" class="hero-icon" width="96" height="96">
+      <p class="eyebrow">v1.0 — free core complete</p>
+      <h1>Digital fieldwork deserves<br>a proper workbench.</h1>
+      <p class="lede">
+        EthnoFlow is a local-first research tool for TikTok digital ethnography — capture,
+        code, and write up your corpus the way you'd work a physical field site, not a
+        marketing dashboard. Everything lives on your device until you choose to export it.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" id="hero-download-btn" href="#download">See downloads</a>
+        <a class="btn btn-secondary" href="https://github.com/uscabayaosj/ethnoflow" target="_blank" rel="noopener">
+          View on GitHub
+        </a>
+      </div>
+      <p class="hero-note">macOS · Windows · Linux · No account · Nothing leaves your device</p>
+    </div>
+  </section>
+
+  <!-- SHOWCASE -->
+  <section class="showcase" aria-label="EthnoFlow on the desktop">
+    <div class="wrap">
+      <div class="showcase-primary">
+        <div class="macbook">
+          <div class="macbook-lid">
+            <div class="macbook-camera"></div>
+            <div class="macbook-screen">
+              <img src="assets/img/screens/light-03-workspace.png" alt="EthnoFlow three-panel workspace, showing provenance and ethics on the left, a TikTok transcript in the middle, and coding on the right" loading="lazy">
+            </div>
+          </div>
+          <div class="macbook-hinge"></div>
+          <div class="macbook-base"></div>
+        </div>
+        <p class="showcase-caption">The workspace — provenance, the record, and analysis, side by side</p>
+      </div>
+
+      <div class="showcase-gallery">
+        <figure class="browser-frame">
+          <div class="browser-chrome"><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span></div>
+          <img src="assets/img/screens/light-01-projects.png" alt="EthnoFlow Studies library, showing research projects as self-contained field sites" loading="lazy">
+          <figcaption class="browser-caption">Studies — each project is its own field site</figcaption>
+        </figure>
+        <figure class="browser-frame">
+          <div class="browser-chrome"><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span></div>
+          <img src="assets/img/screens/light-02-corpus.png" alt="EthnoFlow corpus grid, showing captured TikToks, notes, and imports as codeable artifacts" loading="lazy">
+          <figcaption class="browser-caption">Corpus — every capture, note, and import in one place</figcaption>
+        </figure>
+        <figure class="browser-frame">
+          <div class="browser-chrome"><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span></div>
+          <img src="assets/img/screens/light-04-codebook.png" alt="EthnoFlow Codebook Studio, showing a hierarchical, colour-coded codebook with operational definitions" loading="lazy">
+          <figcaption class="browser-caption">Codebook Studio — versioned, drift-safe coding</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features" id="features">
+    <div class="wrap">
+      <h2 class="section-title">Built for a field site, not a dashboard.</h2>
+      <p class="section-lede">TikTok treated as something to be observed with care — not an API to be pillaged.</p>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <div class="feature-icon">◐</div>
+          <h3>Add it, don't scrape it</h3>
+          <p>Drop in a TikTok URL and EthnoFlow reads only the platform's public oEmbed preview — no scraping, no login. Jot a field note or import a transcript instead, and it becomes a codeable artifact right alongside your captures, in the same corpus.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">⟐</div>
+          <h3>Three-panel workspace</h3>
+          <p>Provenance and ethics on the left, the record — caption, transcript, on-screen text — in the middle, analysis on the right. Nothing about where a piece of data came from or what you're allowed to do with it is ever more than a glance away.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">✎</div>
+          <h3>Code the irony, not just the words</h3>
+          <p>Select any passage and apply a code. A first-class ironic / sarcastic modifier lets you mark post-irony by hand — the register a sentiment model reliably gets wrong, and TikTok runs on.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">◫</div>
+          <h3>A codebook that doesn't lie to you</h3>
+          <p>Codes carry real operational definitions — definition, inclusion, exclusion, anchor — to keep interpretation stable across sessions. Redefine, merge, split, or deprecate one and EthnoFlow versions it, previews the impact, and flags segments coded under the old meaning as drifted for your review. Never silently rewritten.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">◈</div>
+          <h3>Ethics built in, not bolted on</h3>
+          <p>Every artifact carries its own anonymization tier and safety flags — possible minors, identifiable place, sensitive topic — from the moment it's captured. Memos and an append-only journal keep an audit trail of captures and codebook changes alongside your analytic thinking.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">✦</div>
+          <h3>Export &amp; interoperate</h3>
+          <p>A FieldScribe backup (plain or encrypted) that opens natively in FieldScribe Desktop, a portable encrypted SQLite project file, a Markdown vault for Obsidian, or CSV tables for quantitative work. Four formats, all generated locally, all yours.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKFLOW -->
+  <section class="workflow" id="workflow">
+    <div class="wrap workflow-inner">
+      <div class="workflow-copy">
+        <h2 class="section-title">Capture in the feed.<br>Analyze at your desk.</h2>
+        <p class="section-lede">
+          The same rhythm as any other fieldwork — document first, make sense of it after —
+          just built around a platform instead of a place.
+        </p>
+        <ol class="workflow-steps">
+          <li><span class="step-num">01</span> Add a TikTok by URL, jot a field note, or import a transcript — all become codeable artifacts in one corpus.</li>
+          <li><span class="step-num">02</span> Build a codebook with operational definitions, and code passages — including the irony a sentiment model would miss.</li>
+          <li><span class="step-num">03</span> Redefine, merge, split, or deprecate codes as your thinking evolves; segments coded under an old meaning are flagged as drifted for review, never silently rewritten.</li>
+          <li><span class="step-num">04</span> Export to a FieldScribe backup, an encrypted project file, a Markdown vault, or CSV — all generated locally, all yours to keep.</li>
+        </ol>
+      </div>
+      <div class="workflow-art">
+        <img src="assets/img/screens/light-04-codebook.png" alt="EthnoFlow Codebook Studio showing versioned codes with operational definitions" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY ETHNOFLOW -->
+  <section class="compare" id="compare">
+    <div class="wrap">
+      <h2 class="section-title">Why not just screenshot and paste into NVivo?</h2>
+      <p class="section-lede">
+        That's the default workflow for a lot of platform ethnography right now — and it's
+        the one EthnoFlow is built to replace, not the mature CAQDAS suite at the end of it.
+      </p>
+      <div class="compare-table" role="table">
+        <div class="compare-row compare-head" role="row">
+          <div role="columnheader"></div>
+          <div role="columnheader">Screenshot-and-paste + generic CAQDAS</div>
+          <div role="columnheader" class="compare-highlight">EthnoFlow</div>
+        </div>
+        <div class="compare-row" role="row">
+          <div role="cell">Capture</div>
+          <div role="cell">Manual screenshots, downloads, or scraping</div>
+          <div role="cell" class="compare-highlight">Built-in oEmbed capture, with provenance kept from the start — no scraping, no login</div>
+        </div>
+        <div class="compare-row" role="row">
+          <div role="cell">Your data</div>
+          <div role="cell">Cloud tool or a scattered local cache — an unclear story for your ethics board</div>
+          <div role="cell" class="compare-highlight">100% local; nothing leaves your device until you export it</div>
+        </div>
+        <div class="compare-row" role="row">
+          <div role="cell">Ethics</div>
+          <div role="cell">Bolted on after the fact, if at all</div>
+          <div role="cell" class="compare-highlight">Anonymization tiers and safety flags on every artifact, from the first capture</div>
+        </div>
+        <div class="compare-row" role="row">
+          <div role="cell">Coding nuance</div>
+          <div role="cell">Generic codes; sentiment models miss irony</div>
+          <div role="cell" class="compare-highlight">A first-class ironic / sarcastic modifier, coded by a human</div>
+        </div>
+        <div class="compare-row" role="row">
+          <div role="cell">Codebook integrity</div>
+          <div role="cell">Redefining a code silently invalidates old coding</div>
+          <div role="cell" class="compare-highlight">Versioned codebook, impact preview, and drift review before anything is recoded</div>
+        </div>
+        <div class="compare-row" role="row">
+          <div role="cell">Cost</div>
+          <div role="cell">Per-seat commercial license</div>
+          <div role="cell" class="compare-highlight">Free — the v1 core is complete, forever. AI features are an optional paid layer, later</div>
+        </div>
+      </div>
+      <p class="compare-footnote">EthnoFlow isn't trying to replace a mature commercial CAQDAS suite — just to make the step from feed to corpus honest, ethical, and free.</p>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD -->
+  <section class="download" id="download">
+    <div class="wrap">
+      <h2 class="section-title">Get EthnoFlow</h2>
+      <p class="section-lede">One app, three platforms. Free, no seat limit — <span data-version-text>latest release</span>.</p>
+
+      <div class="download-grid">
+        <div class="download-card">
+          <svg class="download-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 2.5c.7 0 1.36.32 1.8.88a5.5 5.5 0 00-1.8 4.12 5.5 5.5 0 001.8 4.12 2.3 2.3 0 01-1.8.88 5.5 5.5 0 010-10z" fill="currentColor"/></svg>
+          <h3>macOS</h3>
+          <p class="download-sub">Apple Silicon &amp; Intel · universal support</p>
+          <a class="btn btn-primary" id="dl-mac-arm" href="https://github.com/uscabayaosj/ethnoflow/releases/latest" target="_blank" rel="noopener">Download (Apple Silicon)</a>
+          <div class="download-alts">
+            <a class="btn btn-secondary btn-sm" id="dl-mac-intel" href="https://github.com/uscabayaosj/ethnoflow/releases/latest" target="_blank" rel="noopener">Intel .dmg</a>
+          </div>
+        </div>
+
+        <div class="download-card">
+          <svg class="download-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 5.5L10.5 4.4V11.5H3V5.5zM11.5 4.25L21 3v8.5h-9.5V4.25zM3 12.5H10.5V19.6L3 18.5V12.5zM11.5 12.5H21V21L11.5 19.75V12.5z" fill="currentColor"/></svg>
+          <h3>Windows</h3>
+          <p class="download-sub">Windows 10 &amp; 11, 64-bit</p>
+          <a class="btn btn-primary" id="dl-win-exe" href="https://github.com/uscabayaosj/ethnoflow/releases/latest" target="_blank" rel="noopener">Download (.exe)</a>
+          <div class="download-alts">
+            <a class="btn btn-secondary btn-sm" id="dl-win-msi" href="https://github.com/uscabayaosj/ethnoflow/releases/latest" target="_blank" rel="noopener">.msi installer</a>
+          </div>
+        </div>
+
+        <div class="download-card">
+          <svg class="download-icon" width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C8 2 6 5 6 8c0 2-1 3-1 5 0 4 3 7 7 7s7-3 7-7c0-2-1-3-1-5 0-3-2-6-6-6zm0 15a3 3 0 110-6 3 3 0 010 6z" fill="currentColor"/></svg>
+          <h3>Linux</h3>
+          <p class="download-sub">AppImage runs on most distros unmodified</p>
+          <a class="btn btn-primary" id="dl-linux-appimage" href="https://github.com/uscabayaosj/ethnoflow/releases/latest" target="_blank" rel="noopener">Download (.AppImage)</a>
+          <div class="download-alts">
+            <a class="btn btn-secondary btn-sm" id="dl-linux-deb" href="https://github.com/uscabayaosj/ethnoflow/releases/latest" target="_blank" rel="noopener">.deb</a>
+            <a class="btn btn-secondary btn-sm" id="dl-linux-rpm" href="https://github.com/uscabayaosj/ethnoflow/releases/latest" target="_blank" rel="noopener">.rpm</a>
+          </div>
+        </div>
+      </div>
+      <p class="download-footnote">All builds are unsigned — see <a href="#install">install instructions</a> below for getting past the first-launch warning · <a href="https://github.com/uscabayaosj/ethnoflow/releases" target="_blank" rel="noopener">All releases →</a></p>
+    </div>
+  </section>
+
+  <!-- INSTALL GUIDE -->
+  <section class="install" id="install">
+    <div class="wrap">
+      <h2 class="section-title">How to Install</h2>
+      <p class="section-lede">These builds aren't code-signed — that's normal for free, open-source desktop software. Here's how to get past the first-launch warning on each platform.</p>
+
+      <div class="install-grid">
+        <div class="install-card">
+          <h3>macOS</h3>
+          <p class="install-sub">One-time step per install.</p>
+          <ol class="install-steps">
+            <li>Open the <strong>.dmg</strong> and drag <strong>EthnoFlow</strong> into <strong>Applications</strong></li>
+            <li>Double-click to open — macOS will show:<br>
+              <span class="step-warning">"EthnoFlow" can't be opened because it is from an unidentified developer.</span>
+            </li>
+            <li>Open <strong>System Settings → Privacy &amp; Security</strong>, scroll down, and click <strong>Open Anyway</strong></li>
+            <li>Confirm with your password or Touch ID</li>
+          </ol>
+        </div>
+
+        <div class="install-card">
+          <h3>Windows</h3>
+          <p class="install-sub">SmartScreen flags unsigned installers by default.</p>
+          <ol class="install-steps">
+            <li>Run the <strong>.exe</strong> (or <strong>.msi</strong>) installer</li>
+            <li>Windows Defender SmartScreen will show:<br>
+              <span class="step-warning">Windows protected your PC.</span>
+            </li>
+            <li>Click <strong>More info</strong>, then <strong>Run anyway</strong></li>
+            <li>Follow the installer as normal</li>
+          </ol>
+        </div>
+
+        <div class="install-card">
+          <h3>Linux</h3>
+          <p class="install-sub">Pick whichever matches your distro.</p>
+          <ol class="install-steps">
+            <li><strong>AppImage:</strong> <em>chmod +x</em> the file, then run it directly — no install step</li>
+            <li><strong>.deb:</strong> <em>sudo dpkg -i</em> the file on Debian/Ubuntu-based distros</li>
+            <li><strong>.rpm:</strong> <em>sudo rpm -i</em> the file on Fedora/openSUSE-based distros</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="install-note">
+        <p><strong>Why the warnings?</strong> EthnoFlow is free, open-source software. It isn't code-signed with an Apple Developer certificate or a Windows signing certificate — both cost money per year, well beyond what a free research tool asks of you. The app is safe: the full source is <a href="https://github.com/uscabayaosj/ethnoflow" target="_blank" rel="noopener">publicly auditable on GitHub</a>, network calls are off by default, and you only need to clear the warning once per install.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CITATION -->
+  <section class="cite" id="cite">
+    <div class="wrap">
+      <h2 class="section-title">Using EthnoFlow in your research?</h2>
+      <p class="section-lede">
+        EthnoFlow is free to use, with one ask: credit it in your bibliography. It costs you
+        nothing and helps other researchers find a tool that respects both their ethics board
+        and their data.
+      </p>
+
+      <div class="cite-grid">
+        <div class="cite-card">
+          <h3>Chicago (Author-Date)</h3>
+          <p class="cite-text" id="cite-chicago">Cabayao, Ulysses S. 2026. "EthnoFlow." Personal website. https://uscabayaosj.github.io/site-ethnoflow.</p>
+          <button class="btn btn-copy" data-copy-target="cite-chicago">Copy</button>
+        </div>
+        <div class="cite-card">
+          <h3>Harvard</h3>
+          <p class="cite-text" id="cite-harvard">Cabayao, U. S. (2026) <em>EthnoFlow</em> [Computer software]. Available at: https://uscabayaosj.github.io/site-ethnoflow (Accessed: DD MM YYYY).</p>
+          <button class="btn btn-copy" data-copy-target="cite-harvard">Copy</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="wrap">
+      <h2 class="section-title">About the Developer</h2>
+      <p class="section-lede">
+        EthnoFlow is built and maintained by <strong>Ulysses S. Cabayao</strong>, a PhD candidate
+        in Anthropology at University College London. His research examines sovereignty, frontiers,
+        and settler-colonialism in the United States. He also builds research software and explores
+        how AI can support qualitative fieldwork — the same frustrations that led to EthnoFlow's
+        sibling project, <a href="https://github.com/uscabayaosj/fieldscribe" target="_blank" rel="noopener">FieldScribe</a>.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <path d="M16 4.5c-6 0-11 5.1-11 11.5S10 27.5 16 27.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M16 9c-3.6 0-6.6 3.1-6.6 7S12.4 23 16 23" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+        <path d="M16 13.4c-1.3 0-2.4 1.2-2.4 2.6s1.1 2.6 2.4 2.6" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+        <circle cx="21.5" cy="16" r="2.1" fill="currentColor"/>
+      </svg>
+      <span>EthnoFlow</span>
+    </div>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="https://github.com/uscabayaosj/ethnoflow" target="_blank" rel="noopener">EthnoFlow (GitHub)</a>
+      <a href="https://github.com/uscabayaosj/ethnoflow/releases" target="_blank" rel="noopener">Releases</a>
+      <a href="https://github.com/uscabayaosj/ethnoflow/issues" target="_blank" rel="noopener">Report a bug</a>
+      <a href="https://github.com/uscabayaosj/fieldscribe-desktop" target="_blank" rel="noopener">FieldScribe Desktop</a>
+      <a href="#cite">Citation</a>
+    </nav>
+    <p class="footer-copy">
+      &copy; 2026 Ulysses S. Cabayao. EthnoFlow is released under the MIT License — free for academic and personal use.
+    </p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
