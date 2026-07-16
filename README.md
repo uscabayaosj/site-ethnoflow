@@ -10,7 +10,7 @@ fonts, and copy are EthnoFlow's own: the CSS custom properties mirror
 `src/styles/theme.css` in the app itself (viridian primary, ochre accent, warm paper
 background), light and dark, right down to the hex values.
 
-**Live site:** https://uscabayaosj.github.io/site-ethnoflow/
+**Live site:** https://uscabayaosj.github.io/site-ethnoflow/ (once Pages is enabled — see Deploy below)
 
 ## Structure
 
@@ -46,6 +46,17 @@ matched by filename pattern, so it keeps working automatically as
 `ethnoflow`'s version-bump + release-build workflows cut new releases. The static
 `href`s already in the HTML point at `/releases/latest`, so downloads still work
 correctly even with JavaScript disabled or the GitHub API unreachable.
+
+## Deploy
+
+[`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml) publishes the repo
+root to GitHub Pages on every push to `main`. **One-time setup required** — this can't be done
+from a workflow, it's a plain repo setting with no API/token path:
+
+1. Repo **Settings → Pages**
+2. Under **Build and deployment → Source**, choose **GitHub Actions**
+
+After that, every push to `main` deploys automatically — no further action needed.
 
 ## License
 

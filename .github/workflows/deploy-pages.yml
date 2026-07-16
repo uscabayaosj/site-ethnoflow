@@ -1,0 +1,37 @@
+name: Deploy Pages
+
+# Publishes the whole repo root (this is a static, no-build-step site — just
+# index.html + assets/) to GitHub Pages on every push to main.
+#
+# One-time manual step, not doable from a workflow: repo Settings → Pages →
+# Source must be set to "GitHub Actions" before this can deploy anything. That
+# toggle has no API/token path — it's a plain repo setting, not secret-gated,
+# so there's nothing to configure here beyond flipping it once in the UI.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v4
