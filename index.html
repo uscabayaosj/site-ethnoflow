@@ -276,12 +276,17 @@
           <p class="install-sub">One-time step per install.</p>
           <ol class="install-steps">
             <li>Open the <strong>.dmg</strong> and drag <strong>EthnoFlow</strong> into <strong>Applications</strong></li>
-            <li>Double-click to open — macOS will show:<br>
-              <span class="step-warning">"EthnoFlow" can't be opened because it is from an unidentified developer.</span>
+            <li>Double-click to open. macOS will often refuse outright, especially on Apple Silicon:<br>
+              <span class="step-warning">"EthnoFlow" is damaged and can't be opened. You should move it to the Bin.</span><br>
+              It isn't damaged — <em>don't</em> delete it. This is Gatekeeper rejecting an app with no paid Apple Developer signature, and the usual "Open Anyway" setting won't even appear for this one.
             </li>
-            <li>Open <strong>System Settings → Privacy &amp; Security</strong>, scroll down, and click <strong>Open Anyway</strong></li>
-            <li>Confirm with your password or Touch ID</li>
+            <li>Open <strong>Terminal</strong> (⌘Space → type <em>Terminal</em>) and run:<br>
+              <span class="step-code">xattr -cr /Applications/EthnoFlow.app</span><br>
+              This clears the quarantine flag that triggers the check — it doesn't touch the app itself.
+            </li>
+            <li>Open EthnoFlow again — it launches normally from here on</li>
           </ol>
+          <p class="install-sub" style="margin-top: 16px; margin-bottom: 0;">Some Macs show the milder <strong>"unidentified developer"</strong> prompt instead — if so, just use <strong>System Settings → Privacy &amp; Security → Open Anyway</strong>, no Terminal needed.</p>
         </div>
 
         <div class="install-card">
@@ -309,7 +314,7 @@
       </div>
 
       <div class="install-note">
-        <p><strong>Why the warnings?</strong> EthnoFlow is free, open-source software. It isn't code-signed with an Apple Developer certificate or a Windows signing certificate — both cost money per year, well beyond what a free research tool asks of you. The app is safe: the full source is <a href="https://github.com/uscabayaosj/ethnoflow" target="_blank" rel="noopener">publicly auditable on GitHub</a>, network calls are off by default, and you only need to clear the warning once per install.</p>
+        <p><strong>Why the warnings — and why macOS sometimes says "damaged"?</strong> EthnoFlow is free, open-source software. It isn't code-signed with an Apple Developer certificate or a Windows signing certificate — both cost money per year, well beyond what a free research tool asks of you. On macOS specifically, an app with no paid signature that's been downloaded from the internet can trip Gatekeeper's strictest check, which reports it as "damaged" rather than showing the friendlier "unidentified developer" prompt — the app isn't actually damaged, and the Terminal command above resolves it. The app is safe either way: the full source is <a href="https://github.com/uscabayaosj/ethnoflow" target="_blank" rel="noopener">publicly auditable on GitHub</a>, network calls are off by default, and you only need to clear the warning once per install.</p>
       </div>
     </div>
   </section>
