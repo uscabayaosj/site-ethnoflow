@@ -87,12 +87,15 @@ fetchLatestRelease().then(function (release) {
   var assets = release.assets;
   var version = release.tag_name || '';
 
-  // macOS: two .dmg builds — Apple Silicon (aarch64) and Intel (x64).
+  // macOS: two .dmg builds — Apple Silicon and Intel.
+  // Match on the actual naming convention from the build pipeline:
+  //   -apple-silicon.dmg  (aarch64)
+  //   -intel.dmg          (x64)
   wireAsset('dl-mac-arm', release, function (a) {
-    return /aarch64.*\.dmg$/i.test(a.name);
+    return /(apple.silicon|aarch64).*\.dmg$/i.test(a.name);
   });
   wireAsset('dl-mac-intel', release, function (a) {
-    return /(^|[^a])x64[._].*\.dmg$/i.test(a.name) || (/\.dmg$/i.test(a.name) && !/aarch64/i.test(a.name));
+    return /intel.*\.dmg$/i.test(a.name);
   });
 
   // Windows: NSIS .exe is the primary, .msi offered as an alternative.
@@ -100,10 +103,9 @@ fetchLatestRelease().then(function (release) {
   wireAsset('dl-win-msi', release, function (a) { return /\.msi$/i.test(a.name); });
 
   // Linux: AppImage is the primary (works on most distros unmodified),
-  // .deb / .rpm offered as alternatives.
+  // .deb offered as an alternative.
   wireAsset('dl-linux-appimage', release, function (a) { return /\.appimage$/i.test(a.name); });
   wireAsset('dl-linux-deb', release, function (a) { return /\.deb$/i.test(a.name); });
-  wireAsset('dl-linux-rpm', release, function (a) { return /\.rpm$/i.test(a.name); });
 
   document.querySelectorAll('[data-version-text]').forEach(function (el) {
     el.textContent = version;
