@@ -505,6 +505,10 @@ section { padding: 96px 0; }
 .footer-links { display: flex; gap: 22px; flex-wrap: wrap; justify-content: center; font-size: 0.88rem; }
 .footer-links a { text-decoration: none; color: #e4ede9; opacity: 0.85; }
 .footer-links a:hover { opacity: 1; color: #fff; }
+.footer-ainsight { font-size: 0.78rem; margin: 12px 0 0; }
+.footer-ainsight a { color: #b7cbc2; text-decoration: none; }
+.footer-ainsight a:hover { color: #fff; }
+
 .footer-copy { font-size: 0.8rem; color: #b7cbc2; max-width: 560px; margin: 8px 0 0; }
 
 /* ---------- Install guide ---------- */
