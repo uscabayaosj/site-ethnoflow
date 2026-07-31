@@ -106,6 +106,7 @@ fetchLatestRelease().then(function (release) {
   // .deb offered as an alternative.
   wireAsset('dl-linux-appimage', release, function (a) { return /\.appimage$/i.test(a.name); });
   wireAsset('dl-linux-deb', release, function (a) { return /\.deb$/i.test(a.name); });
+  wireAsset('dl-linux-rpm', release, function (a) { return /\.rpm$/i.test(a.name); });
 
   document.querySelectorAll('[data-version-text]').forEach(function (el) {
     el.textContent = version;
