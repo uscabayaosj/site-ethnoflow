@@ -39,7 +39,7 @@ function fallbackCopy(text, cb) {
 }
 
 // ---------------------------------------------------------------------
-// Live release info — keeps every download link pointed at whatever
+// Live release info, keeps every download link pointed at whatever
 // GitHub currently reports as the latest release, without editing this
 // page by hand each time version-bump.yml cuts a new one. Falls back to
 // the static hrefs already in the HTML (GitHub's own /releases/latest
@@ -87,7 +87,7 @@ fetchLatestRelease().then(function (release) {
   var assets = release.assets;
   var version = release.tag_name || '';
 
-  // macOS: two .dmg builds — Apple Silicon and Intel.
+  // macOS: two .dmg builds, Apple Silicon and Intel.
   // Match on the actual naming convention from the build pipeline:
   //   -apple-silicon.dmg  (aarch64)
   //   -intel.dmg          (x64)
@@ -128,7 +128,7 @@ fetchLatestRelease().then(function (release) {
       target = 'dl-mac-arm';
       label = 'Download for Mac';
     } else {
-      heroBtn = null; // Unknown platform (mobile, etc.) — leave the default "See downloads" link.
+      heroBtn = null; // Unknown platform (mobile, etc.), leave the default "See downloads" link.
     }
     if (heroBtn) {
       var matched = document.getElementById(target);
